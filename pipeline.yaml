@@ -1,0 +1,22 @@
+stages:
+    -build
+    -test
+    -deploy
+build:
+    stage: build
+    script:
+        - echo "Compilando... "
+        - echo "Compilado."
+
+test:
+    -stage: test
+    -script:
+        - echo "Esta en el paso de test."
+deploy:
+    -stage: deploy
+    -script:
+        - echo "Esperando 20 segundos."
+        - sleep 20
+        - echo "Espera completada"
+
+
